@@ -1,0 +1,71 @@
+LOG:  database system was shut down at 2015-01-16 16:30:30 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  role "DATABASE" does not exist
+FATAL:  database "ChatID_data" does not exist
+FATAL:  database "l" does not exist
+FATAL:  database "l" does not exist
+FATAL:  database "L" does not exist
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  database "aprilrabkin" does not exist
+FATAL:  database "ChatID_data" does not exist
+ERROR:  relation "public.muc_user_sessions" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_user_sessions DROP CONSTRAINT muc_user_sessions_session_id_fkey;
+	
+ERROR:  relation "public.muc_messages" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_messages DROP CONSTRAINT muc_messages_user_session_id_fkey;
+	
+ERROR:  relation "public.muc_messages" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_messages DROP CONSTRAINT muc_messages_session_id_fkey;
+	
+ERROR:  relation "public.muc_messages" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_messages DROP CONSTRAINT muc_messages_chatid_route_session_id_fkey;
+	
+ERROR:  relation "public.muc_chatid_route_sessions" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_chatid_route_sessions DROP CONSTRAINT muc_chatid_route_sessions_session_id_fkey;
+	
+ERROR:  relation "public.muc_user_sessions" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_user_sessions DROP CONSTRAINT muc_user_sessions_pkey;
+	
+ERROR:  relation "public.muc_sessions" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_sessions DROP CONSTRAINT muc_sessions_pkey;
+	
+ERROR:  relation "public.muc_messages" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_messages DROP CONSTRAINT muc_messages_pkey;
+	
+ERROR:  relation "public.muc_chatid_route_sessions" does not exist
+STATEMENT:  ALTER TABLE ONLY public.muc_chatid_route_sessions DROP CONSTRAINT muc_chatid_route_sessions_pkey;
+	
+ERROR:  table "muc_user_sessions" does not exist
+STATEMENT:  DROP TABLE public.muc_user_sessions;
+	
+ERROR:  table "muc_sessions" does not exist
+STATEMENT:  DROP TABLE public.muc_sessions;
+	
+ERROR:  table "muc_messages" does not exist
+STATEMENT:  DROP TABLE public.muc_messages;
+	
+ERROR:  table "muc_chatid_route_sessions" does not exist
+STATEMENT:  DROP TABLE public.muc_chatid_route_sessions;
+	
+ERROR:  table "alembic_version" does not exist
+STATEMENT:  DROP TABLE public.alembic_version;
+	
+ERROR:  function public.within_30_seconds(timestamp with time zone, timestamp with time zone) does not exist
+STATEMENT:  DROP FUNCTION public.within_30_seconds(timestamp with time zone, timestamp with time zone);
+	
+ERROR:  function public.round_minute_quadrant(timestamp with time zone) does not exist
+STATEMENT:  DROP FUNCTION public.round_minute_quadrant(timestamp with time zone);
+	
+ERROR:  extension "hstore" does not exist
+STATEMENT:  DROP EXTENSION hstore;
+	
+LOG:  checkpoints are occurring too frequently (6 seconds apart)
+HINT:  Consider increasing the configuration parameter "checkpoint_segments".
+ERROR:  canceling statement due to user request
+STATEMENT:  select * from muc_messages
+	

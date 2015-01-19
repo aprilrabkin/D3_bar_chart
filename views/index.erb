@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Failed Chats Per Hour</title>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js">
+    </script>
+
+</head>
+<body>
+<script type="text/javascript">
+<% ruby_rows = [] %>
+<% @sql_table.each_with_index do |row, index| %>
+    <% ruby_rows[index] = row %>
+<% end %>
+<%= "var sqlrows = #{ruby_rows.to_json};" %> 
+
+    var dataset = sqlrows;
+</script>
+
+<script type="text/javascript" src="mybarchart.js">
+
+</script>
+
+<style type="text/css" media="screen">
+div.bar {
+    display: inline-block;
+    width: 20px;
+    background-color: teal;
+    margin-right: 2px;
+}
+</style>
+
+
+
+</body>
+</html>  
